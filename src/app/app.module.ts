@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {BookModule} from "./book/book.module";
+import { MouseCursorBox } from './mouse-cursor-box/mouse-cursor-box.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MouseCursorBox
   ],
   imports: [
     BookModule,
