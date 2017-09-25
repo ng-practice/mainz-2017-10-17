@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {TitleBox} from "./title-box/title-box.component";
+import {TitleBox} from './title-box/title-box.component';
 
 @Component({
   selector: 'app-root',
@@ -13,5 +13,9 @@ export class AppComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.titleBox.title = 'Modifizierter Titel';
+  }
+
+  showGreeting(message: string) {
+    window.confirm(message);
   }
 }
