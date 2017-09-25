@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-interface Book {
-}
+import { Book } from '../../core/models';
 
 @Component({
   selector: 'book-list',
@@ -11,8 +9,6 @@ interface Book {
 export class BookList implements OnInit {
   books: Book[];
 
-  constructor() { }
-
   ngOnInit() {
     this.books = this.all();
   }
@@ -20,17 +16,16 @@ export class BookList implements OnInit {
   all(): Book[] {
     return [
       {
-        'title': 'Design Patterns',
-        'subtitle': 'Elements of Reusable Object-Oriented Software',
-        'isbn': '978-0-20163-361-0',
-        'abstract': 'Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves.',
-        'numPages': 395,
-        'author': 'Erich Gamma / Richard Helm / Ralph E. Johnson / John Vlissides',
-        'publisher': {
-          'name': 'Addison-Wesley',
-          'url': 'http://www.addison-wesley.de/'
-        },
-        'id': '978-0-20163-361-0'
+        title: 'Design Patterns',
+        subtitle: 'Elements of Reusable Object-Oriented Software',
+        isbn: '978-0-20163-361-0',
+        abstract: 'Capturing a wealth of experience about the design of object-oriented software, four top-notch designers present a catalog of simple and succinct solutions to commonly occurring design problems. Previously undocumented, these 23 patterns allow designers to create more flexible, elegant, and ultimately reusable designs without having to rediscover the design solutions themselves.',
+        numPages: 395,
+        author: 'Erich Gamma / Richard Helm / Ralph E. Johnson / John Vlissides',
+        publisher: {
+          name: 'Addison-Wesley',
+          url: 'http://www.addison-wesley.de/'
+        }
       },
       {
         'title': 'REST und HTTP',
@@ -74,7 +69,7 @@ export class BookList implements OnInit {
         'numPages': 0,
         'abstract': '',
         'author': '',
-        'isbn': 96840923,
+        'isbn': '2342-234-234-234',
         'publisher': {
           'name': '',
           'url': ''
