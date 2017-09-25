@@ -12,7 +12,7 @@ export class AppComponent implements AfterViewInit {
   @ViewChild(TitleBox) titleBox: TitleBox;
 
   ngAfterViewInit() {
-    this.titleBox.title = 'Modifizierter Titel';
+    // this.titleBox.title = 'Modifizierter Titel';
   }
 
   showGreeting(message: string) {
