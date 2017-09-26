@@ -3,7 +3,9 @@ import { HttpClient } from '@angular/common/http';
 
 import { Observable } from 'rxjs/Observable';
 
-import { Book } from '../../core/models';
+import { BookFromApi, Book } from '../../core/models';
+
+import 'rxjs/add/operator/map';
 
 @Injectable()
 export class BookShelf {
@@ -12,6 +14,12 @@ export class BookShelf {
   constructor(private http: HttpClient) {}
 
   all(): Observable<Book[]> {
-    return this.http.get(`${this.endpoint}/books`);
+    return this.http
+      .get<BookFromApi[]>(`${this.endpoint}/books`)
+      .map(this.mapBooks);
+  }
+
+  private mapBooks(books: BookFromApi[]) {
+    return books.map(book => new Book(book));
   }
 }
