@@ -5,7 +5,7 @@ import {Book} from '../../core/models/book';
 
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/switchMap';
-import { Observable } from 'rxjs/_typings/Observable';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'book-detail',
