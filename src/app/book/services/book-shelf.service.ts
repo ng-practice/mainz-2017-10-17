@@ -22,4 +22,8 @@ export class BookShelf {
   private mapBooks(books: BookFromApi[]) {
     return books.map(book => new Book(book));
   }
+
+  single(isbn: string): Observable<Book> {
+    return this.http.get(`${this.endpoint}/books/${isbn}`);
+  }
 }
