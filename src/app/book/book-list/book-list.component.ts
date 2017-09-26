@@ -13,6 +13,8 @@ export class BookList implements OnInit {
   constructor(private bookShelf: BookShelf) { }
 
   ngOnInit() {
-    this.books = this.bookShelf.all();
+    this.bookShelf
+      .all()
+      .subscribe(books => this.books = books);
   }
 }
