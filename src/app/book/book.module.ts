@@ -7,12 +7,14 @@ import { BookList } from './book-list/book-list.component';
 import { BookCard } from './book-card/book-card.component';
 import { BookShelf } from './services/book-shelf.service';
 import { BookDetail } from './book-detail/book-detail.component';
-import {RouterModule} from '@angular/router';
+import { RouterModule } from '@angular/router';
+import { BookWrapper } from './book-wrapper/book-wrapper.component';
+import { BookRoutingModule } from './book-routing.module';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, RouterModule],
-  declarations: [InfoBoxComponent, BookList, BookCard, BookDetail],
-  exports: [InfoBoxComponent, BookList],
+  imports: [CommonModule, HttpClientModule, RouterModule, BookRoutingModule],
+  declarations: [InfoBoxComponent, BookWrapper, BookList, BookCard, BookDetail],
+  exports: [InfoBoxComponent],
   providers: [BookShelf]
 })
 export class BookModule {}

@@ -1,1 +1,1 @@
-<book-card *ngIf="book" [book]="book"></book-card>
+<book-card *ngIf="book$ | async; let book" [book]="book"></book-card>
