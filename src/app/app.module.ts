@@ -15,12 +15,10 @@ import { AppRoutingModule } from './app-routing.module';
     TitleBox,
   ],
   imports: [
-    BookModule,
     BrowserModule,
 
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

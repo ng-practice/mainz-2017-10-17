@@ -7,7 +7,7 @@ import {BookList} from './book-list/book-list.component';
 
 const routes: Route[] = [
   {
-    path: 'books',
+    path: '',
     component: BookWrapper,
     children: [
       { path: '', component: BookList },
