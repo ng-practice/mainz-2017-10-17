@@ -1,18 +1,17 @@
-import {AfterViewInit, Component, ViewChild} from '@angular/core';
-import {TitleBox} from './title-box/title-box.component';
+import { Component } from '@angular/core';
+import { TitleBus } from './core/title.bus';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements AfterViewInit {
-  title = 'app';
+export class AppComponent {
 
-  @ViewChild(TitleBox) titleBox: TitleBox;
-
-  ngAfterViewInit() {
-    // this.titleBox.title = 'Modifizierter Titel';
+  // Don't forget to provide TitleBus inside app.module
+  constructor(titleService: Title, bus: TitleBus) {
+    bus.title().subscribe(title => titleService.setTitle(title));
   }
 
   showGreeting(message: string) {

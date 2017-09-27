@@ -7,6 +7,7 @@ import { MouseCursorBox } from './mouse-cursor-box/mouse-cursor-box.component';
 import { TitleBox } from './title-box/title-box.component';
 
 import { AppRoutingModule } from './app-routing.module';
+import { TitleBus } from './core/title.bus';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { AppRoutingModule } from './app-routing.module';
 
     AppRoutingModule
   ],
+  providers: [TitleBus],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

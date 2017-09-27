@@ -10,10 +10,25 @@ import { BookDetail } from './book-detail/book-detail.component';
 import { RouterModule } from '@angular/router';
 import { BookWrapper } from './book-wrapper/book-wrapper.component';
 import { BookRoutingModule } from './book-routing.module';
+import { BookForm } from './book-form/book-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, RouterModule, BookRoutingModule],
-  declarations: [InfoBoxComponent, BookWrapper, BookList, BookCard, BookDetail],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    RouterModule,
+    ReactiveFormsModule,
+    BookRoutingModule
+  ],
+  declarations: [
+    InfoBoxComponent,
+    BookWrapper,
+    BookList,
+    BookCard,
+    BookDetail,
+    BookForm
+  ],
   exports: [InfoBoxComponent],
   providers: [BookShelf]
 })

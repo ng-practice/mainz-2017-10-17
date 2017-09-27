@@ -4,6 +4,7 @@ import {Route, RouterModule} from '@angular/router';
 import {BookWrapper} from './book-wrapper/book-wrapper.component';
 import {BookDetail} from './book-detail/book-detail.component';
 import {BookList} from './book-list/book-list.component';
+import { BookForm } from './book-form/book-form.component';
 
 const routes: Route[] = [
   {
@@ -11,7 +12,8 @@ const routes: Route[] = [
     component: BookWrapper,
     children: [
       { path: '', component: BookList },
-      { path: ':isbn', component: BookDetail },
+      { path: 'create', component: BookForm },
+      { path: ':isbn', component: BookDetail }
     ]
   }
  ];
