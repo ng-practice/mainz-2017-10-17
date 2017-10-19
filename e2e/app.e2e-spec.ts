@@ -1,6 +1,7 @@
 import { AppPage } from './app.po';
+import { browser } from 'protractor';
 
-describe('mainz App', () => {
+describe('main App', () => {
   let page: AppPage;
 
   beforeEach(() => {
@@ -9,6 +10,13 @@ describe('mainz App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
+    expect(page.getParagraphText()).toEqual('Deine Workshop Übungen');
+  });
+
+  it('should navigate to details', () => {
+    page.navigateTo();
+    page.clickFirstDetailLink();
+
+    expect(browser.getCurrentUrl()).toMatch(/books\/.+$/);
   });
 });

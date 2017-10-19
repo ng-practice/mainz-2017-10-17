@@ -6,6 +6,10 @@ export class AppPage {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('title-box h3')).getText();
+  }
+
+  clickFirstDetailLink() {
+    return element(by.css('book-card a')).click();
   }
 }
